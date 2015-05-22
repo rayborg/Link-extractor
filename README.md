@@ -1,3 +1,4 @@
 # Link-extractor
-Extract links from a file
-cat filename | grep http | grep -shoP 'http.*?["|]' | sed s/.$// | sort | uniq -c | sort -n
+Extract links from a pipe-seperated file:
+
+grep http filename | grep -shoP 'http.*?["|]' | sed s/.$// | sort | uniq -c | sort -n
